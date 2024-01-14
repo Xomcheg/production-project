@@ -1,24 +1,5 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-# on:
-#   push:
-#     branches: [ master, main ]
-#   pull_request:
-#     branches: [ master, develop, main ]
-
-# jobs:
-#  integration:
-# 		# ...
-#     # Steps represent a sequence of tasks that will be executed as part of the job
-#     steps:
-#       - name: Setup Node.js environment
-#         uses: actions/setup-node@v1.4.3
-#         with:
-#           node-version: ${{ matrix.node }}
-
-#       - name: Checkout master branch
-#         uses: actions/checkout@v2
-
 
 on: [push]
 jobs:
