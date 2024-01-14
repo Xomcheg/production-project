@@ -1,15 +1,8 @@
 name: Linting, testing, bukding
 on: [push]
-  # push:
-  #   branches: [ main ]
-  # pull_request: 
-  #   branches: [ main ]
 jobs:
   pipeline: 
     runs-on: ubuntu-latest
-    strategy:
-      matrix: 
-        node-version: [ 20.x ]
 
     steps: 
       - uses: actions/checkout@v2
