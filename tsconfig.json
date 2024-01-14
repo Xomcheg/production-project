@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    // esModuleInterop позволяет работать с пакетами, которые используют
+    // common js как с обычными пакетами с помощью import  (require() module.export) = common js
+    // import Moment from 'Moment';
+    // без флага esModuleInterop результат undefined
+    // console.log(Moment)
+    // с флагом результат [object Object]
+    "esModuleInterop": true,
+    // Если какая либо библиотека не имеет default import,
+    // лоадеры вроде ts-loader или babel-loader автоматически создают их
+    // вмето такого импорта * as React from 'react'
+    // можно использовать такой
+    "allowSyntheticDefaultImports": true, 
+    "baseUrl": ".", // указываем путь до базовой дирректории, также необходимо для работы с алиасами
+    "paths": { // настройка необходима для корректной работы алиасов
+      // "@/*": ["./src/*"], // @/* -звездочка говорит что все участки по этому пути мы заменяем на ./src
+      "*": ["./src/*"],
+    }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "include": [
+    "./config/jest/setupTests.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx", 
+  ],
+}
