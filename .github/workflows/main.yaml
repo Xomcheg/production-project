@@ -4,9 +4,9 @@ on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-    # steps:
-    #   - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      steps: 
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      # steps: 
       - uses: actions/checkout@v2
       - name: Staring Node.js ${{ matrix.node-version }}
       uses: actions/stup-node@v1
