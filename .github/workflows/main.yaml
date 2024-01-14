@@ -1,50 +1,50 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on:
-  push:
-    branches: [ master, main ]
-  pull_request:
-    branches: [ master, develop, main ]
+# name: GitHub Actions Demo
+# run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+# on:
+#   push:
+#     branches: [ master, main ]
+#   pull_request:
+#     branches: [ master, develop, main ]
 
-jobs:
- integration:
-		# ...
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v1.4.3
-        with:
-          node-version: ${{ matrix.node }}
-
-      - name: Checkout master branch
-        uses: actions/checkout@v2
-
-
-# on: [push]
 # jobs:
-#   Explore-GitHub-Actions:
-#     runs-on: ubuntu-latest
-#     strategy:
-#       matrix: 
-#         node-version: [ 20.x ]
+#  integration:
+# 		# ...
+#     # Steps represent a sequence of tasks that will be executed as part of the job
 #     steps:
-#       node-version: ${{ matrix.node-version }}
-#       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-#       # # steps: 
-#       # - uses: actions/checkout@v2
-#       # - name: Staring Node.js ${{ matrix.node-version }}
-#       # uses: actions/stup-node@v1
-#       # with:
-#       - name: install modules
-#         run: npm install
-#       - name: build production project
-#         run: npm run build:prod
-#       - name: linting typescript
-#         run: npm run lint:ts
-#       - name: linting scss
-#         run: npm run lint:scss
-#       - name: unit testing
-#         run: npm run test:unit
+#       - name: Setup Node.js environment
+#         uses: actions/setup-node@v1.4.3
+#         with:
+#           node-version: ${{ matrix.node }}
+
+#       - name: Checkout master branch
+#         uses: actions/checkout@v2
+
+
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: 
+        node-version: [ 20.x ]
+    steps:
+      node-version: ${{ matrix.node-version }}
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      # # steps: 
+      # - uses: actions/checkout@v2
+      # - name: Staring Node.js ${{ matrix.node-version }}
+      # uses: actions/stup-node@v1
+      # with:
+      - name: install modules
+        run: npm install
+      - name: build production project
+        run: npm run build:prod
+      - name: linting typescript
+        run: npm run lint:ts
+      - name: linting scss
+        run: npm run lint:scss
+      - name: unit testing
+        run: npm run test:unit
 
 
 
