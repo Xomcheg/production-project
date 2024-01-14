@@ -7,21 +7,21 @@ jobs:
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       # # steps: 
-      # - uses: actions/checkout@v2
-      # - name: Staring Node.js ${{ matrix.node-version }}
-      # uses: actions/stup-node@v1
-      # with:
-      #   node-version: ${{ matrix.node-version }}
-      # - name: install modules
-      #   run: npm install
-      # - name: build production project
-      #   run: npm run build:prod
-      # - name: linting typescript
-      #   run: npm run lint:ts
-      # - name: linting scss
-      #   run: npm run lint:scss
-      # - name: unit testing
-      #   run: npm run test:unit
+      - uses: actions/checkout@v2
+      - name: Staring Node.js ${{ matrix.node-version }}
+      uses: actions/stup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+      - name: install modules
+        run: npm install
+      - name: build production project
+        run: npm run build:prod
+      - name: linting typescript
+        run: npm run lint:ts
+      - name: linting scss
+        run: npm run lint:scss
+      - name: unit testing
+        run: npm run test:unit
 
 # name: Linting, testing, bukding
 # on: [push]
