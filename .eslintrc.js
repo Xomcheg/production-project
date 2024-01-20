@@ -10,19 +10,6 @@ module.exports = {
         'plugin:i18next/recommended',
         'plugin:storybook/recommended',
     ],
-    // overrides: [
-    //   {
-    //     env: {
-    //       node: true,
-    //     },
-    //     files: [
-    //       '.eslintrc.{js,cjs}',
-    //     ],
-    //     parserOptions: {
-    //       sourceType: 'script',
-    //     },
-    //   },
-    // ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeauteres: {
@@ -35,6 +22,7 @@ module.exports = {
         '@typescript-eslint',
         'react',
         'i18next',
+        'react-hooks',
     ],
     rules: {
     // 'react/jsx-indent': [2, { indentMode: 4, ignoreTernaryOperator: true }],
@@ -58,6 +46,11 @@ module.exports = {
         'import/no-extraneous-dependencies': 'warn',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] }],
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks // для того что бы не забывать добавлять зависимости для мемоизированных функций
+        'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
+        'no-param-reassign': 'off',
     },
     globals: {
         __PLATFORM__: true,
@@ -68,9 +61,10 @@ module.exports = {
 
     overrides: [ // это свойство позволяет для определенного типа файлов переопределить какие либо правила
         {
-            files: ['**/src/**/*.test.{ts,tsx}'], // для всех тестовых файлов отключаем проверку переводов
+            files: ['**/src/**/*.{test,stories}.{ts,tsx}'], // для всех тестовых файлов отключаем проверку переводов
             rules: {
                 'i18next/no-literal-string': 'off',
+                'max-len': 'off',
             },
         },
     ],

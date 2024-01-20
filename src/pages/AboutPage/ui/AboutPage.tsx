@@ -1,4 +1,5 @@
 /* eslint-disable i18next/no-literal-string */
+import { Counter } from 'entities/counter';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -8,6 +9,7 @@ const AboutPage = () => {
     return (
         <div>
             <h1>{t('О сайте')}</h1>
+            <Counter />
             <div>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic autem laboriosam,
                 sit laborum animi aut esse dolore deleniti blanditiis unde commodi, ullam
