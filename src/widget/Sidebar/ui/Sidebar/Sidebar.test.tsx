@@ -1,7 +1,7 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import {
     fireEvent, screen,
 } from '@testing-library/react';
-import { renderWithTranslation } from 'shared/lib/renderWithTranslation/renderWithTranslation';
 import { componentRender } from 'shared/lib/tests/componentRender/componentRender';
 import { Sidebar } from './Sidebar';
 

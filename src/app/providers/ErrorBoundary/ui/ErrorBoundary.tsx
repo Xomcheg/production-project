@@ -1,3 +1,5 @@
+/* Приведенный выше код представляет собой компонент TypeScript React, который действует как граница
+ошибок, улавливая и отображая любые ошибки, возникающие в его дочерних компонентах. */
 import React, { ErrorInfo, ReactNode, Suspense } from 'react';
 import { ErrorPage } from 'widget/ErrorPage';
 import { PageLoader } from 'shared/ui/PageLoader/ui/PageLoader';

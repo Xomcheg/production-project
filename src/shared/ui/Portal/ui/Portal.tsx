@@ -1,4 +1,3 @@
-
 import { ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 
@@ -9,7 +8,7 @@ interface PortalProps {
 
 export function Portal(props: PortalProps) {
     const {
-        children, 
+        children,
         element = document.body,
     } = props;
 

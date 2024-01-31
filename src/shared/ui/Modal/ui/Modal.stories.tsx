@@ -18,4 +18,3 @@ export const Light: Story = {
         isOpen: true,
     },
 };
-

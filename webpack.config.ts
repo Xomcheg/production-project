@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 // импорты перед типизацией
 // const HtmlWebpackPlugin = require('html-webpack-plugin'); //  генерирует HTML-файл для вашего приложения и автоматически вставляет '
 //                                                           //  в этот файл все созданные вами пакеты

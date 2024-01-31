@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title"
+    },
+    {
+      "id": "2",
+      "title": "another title и"
+    },
+    {
+      "id": "3",
+      "title": "another title c"
+    },
+    {
+      "id": "4",
+      "title": "another title d"
+    },
+    {
+      "id": "5",
+      "title": "another title e"
+    },
+    {
+      "username": "admin",
+      "password": "123",
+      "id": "dPFGtcJ"
+    },
+    {
+      "username": "admin",
+      "password": "123",
+      "id": "fCBh0ny"
+    },
+    {
+      "username": "admin",
+      "password": "123",
+      "id": "v2XYSAk"
+    },
+    {
+      "id": "uHkp9G0"
+    },
+    {
+      "username": "admin",
+      "password": "123",
+      "id": "hpnox-6"
+    },
+    {
+      "username": "admin",
+      "password": "123",
+      "id": "V4RfY5N"
+    },
+    {
+      "username": "admin",
+      "password": "123",
+      "id": "uYdzU6G"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123"
+    }
+  ]
+}
